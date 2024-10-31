@@ -1,0 +1,173 @@
+/* public/styles.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+input[type="file"],
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccd1d9;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"] {
+    padding: 6px 12px;
+}
+
+input[type="file"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1f6391;
+}
+
+.alert {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.alert.error {
+    background-color: #fdecea;
+    color: #e74c3c;
+    border: 1px solid #f5c6cb;
+}
+
+.alert.success {
+    background-color: #eafaf1;
+    color: #2ecc71;
+    border: 1px solid #c3e6cb;
+}
+
+.download-section {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #bdc3c7;
+    color: #fff;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 480px) {
+    .card {
+        padding: 20px 25px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Smooth transitions for form elements */
+input[type="file"],
+input[type="text"],
+input[type="number"],
+button {
+    transition: all 0.3s ease;
+}
+
+.card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Focus outline for accessibility */
+input:focus,
+button:focus,
+a:focus {
+    outline: 2px dashed #2980b9;
+    outline-offset: 4px;
+}

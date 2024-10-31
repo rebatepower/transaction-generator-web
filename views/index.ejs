@@ -1,0 +1,52 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the external CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Transaction Generator</h1>
+
+            <% if (error) { %>
+                <div class="alert error"><%= error %></div>
+            <% } %>
+
+            <% if (message) { %>
+                <div class="alert success"><%= message %></div>
+            <% } %>
+
+            <form action="/generate" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="productPrices">Upload Product Prices CSV:</label>
+                    <input type="file" name="productPrices" id="productPrices" accept=".csv" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="supplierId">Supplier ID:</label>
+                    <input type="text" name="supplierId" id="supplierId" placeholder="e.g., S068" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="specifiedYear">Year:</label>
+                    <input type="number" name="specifiedYear" id="specifiedYear" min="2000" max="2100" placeholder="e.g., 2024" required>
+                </div>
+
+                <button type="submit">Generate Transactions</button>
+            </form>
+
+            <div class="download-section">
+                <a href="/sample_product_prices.csv" download class="download-link">Download Sample CSV</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

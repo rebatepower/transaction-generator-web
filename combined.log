@@ -1,0 +1,5 @@
+{"level":"info","message":"Server is running on port 8080","timestamp":"2024-10-30T03:31:40.078Z"}
+{"level":"info","message":"Total number of products: 200","timestamp":"2024-10-30T03:32:09.819Z"}
+{"level":"info","message":"Number of records per month set to: 200","timestamp":"2024-10-30T03:32:09.819Z"}
+{"apr":1.3,"aug":2.1,"dec":4.9,"feb":8.7,"jan":6.7,"jul":5.5,"jun":10.2,"level":"info","mar":12,"may":8.3,"message":"Randomized units_per_month values:","nov":13.4,"oct":7.2,"sep":13.3,"timestamp":"2024-10-30T03:32:09.857Z"}
+{"level":"error","message":"Error during generation: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.","timestamp":"2024-10-30T03:32:09.983Z"}
